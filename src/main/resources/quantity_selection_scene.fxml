@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="231.0" prefWidth="343.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Scenes.SceneController.QuantitySelectionController">
+   <children>
+      <Text fx:id="product_text" strokeType="OUTSIDE" strokeWidth="0.0" text="Product" textAlignment="CENTER">
+         <font>
+            <Font size="23.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin>
+      </Text>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="quantity_textfield" onAction="#submitResult" prefHeight="27.0" prefWidth="50.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets left="20.0" right="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="36.0" prefWidth="343.0">
+         <children>
+            <Button fx:id="ok_button" mnemonicParsing="false" onAction="#submitResult" text="Ok">
+               <HBox.margin>
+                  <Insets left="15.0" right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancel_button" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelTask" text="Cancel" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
