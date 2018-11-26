@@ -62,7 +62,7 @@ public class PaySceneController extends CustomBaseController
     {
         this.purchase_list = purchaseData;
         initialPurchaseTable();
-        calculateSubTotal();
+         calculateSubTotal();
         calculateVAT();
         calculateTotal();
     }
@@ -93,7 +93,6 @@ public class PaySceneController extends CustomBaseController
         }
 
         double raw_sub_total = CustomDecimalFormat.roundMaxTwoDecimal(sub_total_value);
-
         sub_total.setText(getValueIncludeCurrency(raw_sub_total));
     }
 

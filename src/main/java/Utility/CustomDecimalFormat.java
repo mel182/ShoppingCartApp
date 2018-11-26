@@ -9,8 +9,6 @@ import java.text.DecimalFormat;
  */
 public class CustomDecimalFormat
 {
-    private static final String TWO_DECIMAL_ROUND_PATTERN = "####0.00";
-
     /**
      * Round value to tow decimal
      * @param value The target value
@@ -18,7 +16,6 @@ public class CustomDecimalFormat
      */
     public static double roundMaxTwoDecimal(double value)
     {
-        DecimalFormat decimalFormat = new DecimalFormat(TWO_DECIMAL_ROUND_PATTERN);
-        return Double.valueOf(decimalFormat.format(value));
+        return Math.round(value*100)/100.0d;
     }
 }
