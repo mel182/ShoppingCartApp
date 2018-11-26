@@ -13,7 +13,6 @@ public enum PropertyIdentifier
     CART_ITEM_DESCRIPTION("description"),
     CART_ITEM_TOTAL_PRICE("total_price");
 
-
     private final String id;
 
     /**

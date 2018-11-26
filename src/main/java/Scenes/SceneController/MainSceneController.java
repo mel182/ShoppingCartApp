@@ -92,7 +92,7 @@ public class MainSceneController extends CustomBaseController implements Quantit
                 new TableColumnReference(product_list_price_column,PropertyIdentifier.PRODUCT_PRICE.toString())
         };
 
-        intitializeTableView(product_tableView,productItems,(clickCount, selectedItem) -> {
+        initializeTableView(product_tableView,productItems,(clickCount, selectedItem) -> {
 
             if (selectedItem instanceof ProductItem)
             {
@@ -115,7 +115,7 @@ public class MainSceneController extends CustomBaseController implements Quantit
                 new TableColumnReference(cart_price_column,PropertyIdentifier.CART_ITEM_TOTAL_PRICE.toString())
         };
 
-        intitializeCartItemTableView(shopping_cart_list,this.cartItems,(clickCount, selectedItem) -> {
+        initializeCartItemTableView(shopping_cart_list,this.cartItems,(clickCount, selectedItem) -> {
 
             if (selectedItem instanceof CartItem)
             {
@@ -214,6 +214,7 @@ public class MainSceneController extends CustomBaseController implements Quantit
     {
         cartItems.clear();
         shopping_cart_list.getItems().clear();
+        delete_cart_item_button.setVisible(false);
     }
 
     /**

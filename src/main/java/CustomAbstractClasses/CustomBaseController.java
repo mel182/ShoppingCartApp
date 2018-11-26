@@ -95,10 +95,17 @@ public abstract class CustomBaseController
         return "€ "+value;
     }
 
-
-    protected void intitializeCartItemTableView(TableView tableView, List<CartItem> cartItems, @Nullable OnTableViewRowClickListener onTableViewRowClickListener, String placeholder, TableColumnReference...columnReferences)
+    /**
+     * Initialize table view based on the properties provided
+     * @param tableView The target table view
+     * @param cartItems The {@link CartItem} object list containing the cart item properties
+     * @param onTableViewRowClickListener The interface callback instance
+     * @param placeholder The table view place holder
+     * @param columnReferences The column reference list containing the table column and the property ID
+     */
+    @SuppressWarnings("unchecked")
+    protected void initializeCartItemTableView(TableView tableView, List<CartItem> cartItems, @Nullable OnTableViewRowClickListener onTableViewRowClickListener, String placeholder, TableColumnReference...columnReferences)
     {
-
         final ObservableList<CartItem> items = FXCollections.observableArrayList(cartItems);
 
         for (TableColumnReference tableColumnReference: columnReferences)
@@ -107,40 +114,21 @@ public abstract class CustomBaseController
         }
 
         tableView.setItems(items);
-
         setItemClickListener(tableView,onTableViewRowClickListener);
-
         tableView.setPlaceholder(new Label(placeholder));
-
-
-        /*
-        final ObservableList<CartItem> cartItems = FXCollections.observableArrayList(new PropertyValueFactory<CartItem,String>(PropertyIdentifier.CART_ITEM_QUANTITY.toString()));
-
-        cart_quantity_column.setCellValueFactory(new PropertyValueFactory<CartItem,String>(PropertyIdentifier.CART_ITEM_QUANTITY.toString()));
-        cart_product_column.setCellValueFactory(new PropertyValueFactory<CartItem,String>(PropertyIdentifier.CART_ITEM_DESCRIPTION.toString()));
-        cart_price_column.setCellValueFactory(new PropertyValueFactory<CartItem,String>(PropertyIdentifier.CART_ITEM_TOTAL_PRICE.toString()));
-        shopping_cart_list.setItems(cartItems);
-
-        setItemClickListener(shopping_cart_list, (clickCount, selectedItem) -> {
-
-            if (selectedItem instanceof CartItem)
-            {
-                cartSelectedItem = (CartItem) selectedItem;
-                delete_cart_item_button.setVisible(true);
-            }
-        });
-
-        shopping_cart_list.setPlaceholder(new Label(PlaceHolder.EMPTY_CART_LIST.toString()));
-        */
-
-
     }
 
-    // ---------------
-
-    protected void intitializeTableView(TableView tableView,List<ProductItem> productItems, OnTableViewRowClickListener onTableViewRowClickListener, String placeholder, TableColumnReference...columnReferences)
+    /**
+     * Initialize table view based on the properties provided
+     * @param tableView The target table view
+     * @param productItems The {@link ProductItem} object list containing the product properties
+     * @param onTableViewRowClickListener The interface callback instance
+     * @param placeholder The table view place holder
+     * @param columnReferences The column reference list containing the table column and the property ID
+     */
+    @SuppressWarnings("unchecked")
+    protected void initializeTableView(TableView tableView, List<ProductItem> productItems, OnTableViewRowClickListener onTableViewRowClickListener, String placeholder, TableColumnReference...columnReferences)
     {
-
         final ObservableList<ProductItem> items = FXCollections.observableArrayList(productItems);
 
         for (TableColumnReference tableColumnReference: columnReferences)
@@ -149,35 +137,7 @@ public abstract class CustomBaseController
         }
 
         tableView.setItems(items);
-
         setItemClickListener(tableView,onTableViewRowClickListener);
-
         tableView.setPlaceholder(new Label(placeholder));
-
-
-        /*
-        final ObservableList<CartItem> cartItems = FXCollections.observableArrayList(new PropertyValueFactory<CartItem,String>(PropertyIdentifier.CART_ITEM_QUANTITY.toString()));
-
-        cart_quantity_column.setCellValueFactory(new PropertyValueFactory<CartItem,String>(PropertyIdentifier.CART_ITEM_QUANTITY.toString()));
-        cart_product_column.setCellValueFactory(new PropertyValueFactory<CartItem,String>(PropertyIdentifier.CART_ITEM_DESCRIPTION.toString()));
-        cart_price_column.setCellValueFactory(new PropertyValueFactory<CartItem,String>(PropertyIdentifier.CART_ITEM_TOTAL_PRICE.toString()));
-        shopping_cart_list.setItems(cartItems);
-
-        setItemClickListener(shopping_cart_list, (clickCount, selectedItem) -> {
-
-            if (selectedItem instanceof CartItem)
-            {
-                cartSelectedItem = (CartItem) selectedItem;
-                delete_cart_item_button.setVisible(true);
-            }
-        });
-
-        shopping_cart_list.setPlaceholder(new Label(PlaceHolder.EMPTY_CART_LIST.toString()));
-        */
-
-
     }
-
-
-
 }

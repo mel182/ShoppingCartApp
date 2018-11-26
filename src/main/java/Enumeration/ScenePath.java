@@ -11,7 +11,8 @@ public enum ScenePath
     PAY_SCENE("/pay_scene.fxml"),
     VIEW_PRODUCT_LIST("/view_product_scene.fxml"),
     ADD_NEW_PRODUCT_SCENE("/add_product_scene.fxml"),
-    ABOUT_SCENE("/about_scene.fxml");
+    ABOUT_SCENE("/about_scene.fxml"),
+    MAIN_SCENE("/main_scene.fxml");
 
     private final String path;
 

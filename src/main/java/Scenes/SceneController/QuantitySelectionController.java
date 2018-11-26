@@ -36,7 +36,6 @@ public class QuantitySelectionController extends CustomBaseController
     private QuantitySelectionCallback quantitySelectionCallback;
     private ProductItem selectedProduct;
     private static final String DEFAULT_QUANTITY = "1";
-//    private static final String DECIMAL_ONLY_PATTERN = "\\d*";
     //endregion
 
     /**

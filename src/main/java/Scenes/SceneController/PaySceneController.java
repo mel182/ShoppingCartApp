@@ -79,7 +79,7 @@ public class PaySceneController extends CustomBaseController
                 new TableColumnReference(invoice_price_column,PropertyIdentifier.CART_ITEM_TOTAL_PRICE.toString())
         };
 
-        intitializeCartItemTableView(purchase_item_table_view,this.purchase_list,null, PlaceHolder.EMPTY_CART_LIST.toString(), column_references);
+        initializeCartItemTableView(purchase_item_table_view,this.purchase_list,null, PlaceHolder.EMPTY_CART_LIST.toString(), column_references);
     }
 
     /**

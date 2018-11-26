@@ -1,6 +1,7 @@
-package Scenes;
+package Main;
 
 import CustomAbstractClasses.CustomBaseApplication;
+import Enumeration.ScenePath;
 import javafx.stage.Stage;
 
 /**
@@ -16,7 +17,7 @@ public class Main extends CustomBaseApplication {
     @Override
     public void start(Stage primaryStage)
     {
-        launchScene("/main_scene.fxml","Shopping cart app");
+        launchScene(ScenePath.MAIN_SCENE.toString(),"Shopping cart app");
     }
 
     /**

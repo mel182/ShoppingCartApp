@@ -44,7 +44,7 @@ public class ViewRowProductController extends CustomBaseController implements On
                 new TableColumnReference(product_column,PropertyIdentifier.PRODUCT_NAME.toString())
         };
 
-        intitializeTableView(product_list_tableview,ProductList.getInstance().getList(),this, PlaceHolder.EMPTY_PRODUCT_LIST.toString(), column_references);
+        initializeTableView(product_list_tableview,ProductList.getInstance().getList(),this, PlaceHolder.EMPTY_PRODUCT_LIST.toString(), column_references);
 
     }
 

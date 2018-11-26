@@ -24,7 +24,7 @@ public class ProductList {
 
     /**
      * Get instance of the singleton class.
-     * This method handles the Mutual Exclusion Object (mutex), this crucial since a mutex is created with a unique name.
+     * This method handles the Mutual Exclusion Object (mutex), this is crucial since a mutex is created with a unique name.
      * After this stage, any thread that need the resource must lock the mutex from other threads while it is using the resources.
      * The mutex object is set to unlock when the data is no longer needed or the routine is finished.
      * @return {@link ProductList} instance
